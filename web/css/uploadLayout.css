@@ -1,0 +1,6 @@
+html,body{margin:0;padding:0;text-align:center;}
+div.container{margin:100px auto;width:1200px}
+table,form{margin:10px auto}
+tr,td{text-align:left}
+input{padding:20px;margin:1px auto;align-items:center}
+.container>section input{font-size:1.5em}

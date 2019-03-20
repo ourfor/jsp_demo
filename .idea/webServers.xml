@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0dd16489-dcfa-4097-a84d-60025db96294" name="vultr" url="http://ip.ourfor.top">
+        <fileTransfer host="ip.ourfor.top" port="1205" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/var/lib/tomcat/webapps" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="1205" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="2d981a96-b9b5-40b1-8363-8f77e945a1e4" name="docker" url="http://localhost:4040">
+        <fileTransfer host="localhost" port="2020" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/var/lib/tomcat/webapps" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2020" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
