@@ -8,6 +8,12 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public class ShowStudent extends StudentServlet {
+    public String message = "ShowStudent";
+    @Override
+    protected void DealReq(HttpServletRequest request) throws IOException, ServletException {
+
+    }
+
     @Override
     protected void printContent(HttpServletResponse response,
                                 HttpServletRequest request,

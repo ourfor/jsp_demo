@@ -13,6 +13,19 @@ import javax.servlet.http.HttpServletResponse;
 public abstract class StudentServlet extends HttpServlet{
     protected String Title = "";
     protected String message;
+
+    public void setTitle(String title) {
+        Title = title;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setNext(StudentServlet next) {
+        this.next = next;
+    }
+
     protected StudentServlet next;
 
     protected void Judge(String message,
@@ -54,4 +67,8 @@ public abstract class StudentServlet extends HttpServlet{
                                          HttpServletRequest request,
                                          List<Student> students)
             throws IOException,ServletException;
+
+    protected abstract void DealReq(HttpServletRequest request)
+            throws IOException,ServletException;
+
 }
