@@ -1,0 +1,6 @@
+html,body{margin:0;padding:0;text-align:center;}
+div.container{margin:100px auto;width:1200px}
+#upload{padding:10px;width:200px;height:200px;border:4px dashed red;border-radius:15px;background-image:url(https://ws1.sinaimg.cn/large/006Y07gTgy1g1ag9hh7chj3069069jr6.jpg);background-size:contain; }
+#upload{margin:0 auto;background-repeat:no-repeat}
+#upload:hover{cursor:pointer}
+input[name=filename]{visibility:hidden}

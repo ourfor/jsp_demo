@@ -1,0 +1,6 @@
+body{text-align: center;background: #dad7d78a}
+body form{border:1px #000fff;border-radius:20px;text-align:center;border:dotted;width:400px;margin:10px auto;padding:20px;background:white;}
+@media screen and (max-width:1000px){
+    body{width:100%;}
+    form{width:80%}
+}

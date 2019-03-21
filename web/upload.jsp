@@ -20,26 +20,22 @@
     -->
     <!-- javaScript -->
     <script src="js/check.js"></script>
-    <link type="text/css" rel="stylesheet" href="./css/uploadLayout.css">
+    <link type="text/css" rel="stylesheet" href="css/layout/upload.css">
 </head>
 <body>
 <div class="container">
     <section>
+        <div id="upload"></div>
         <form enctype="multipart/form-data" method="post" action="./upload.do">
-            <table>
-                <tr>
-                    <td>
+                    <div>
                         <input type="file" name="filename">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+                    </div>
+                    <section class="FileInfo">未选择任何文件</section>
+                    <div>
                         <input type="submit" value="确认上传" id="confirm">
-                        <input type="reset" value="取消上传">
-                    </td>
-                </tr>
-                <tr>
-                    <td>${message}</td>
+                        <input type="reset" value="取消上传" id="reset">
+                    </div>
+
                     <%!
                         String fileName = "";
                     %>
@@ -51,15 +47,15 @@
                             request.setAttribute("recentUpload","查看最近上传的文件");
                         }
                     %>
-                </tr>
-                <tr><td>
-                    <a href='${filename}'>${recentUpload}</a>
-                </td></tr>
-            </table>
+                    <div>
+                        <a href='${filename}'>${recentUpload}</a>
+                    </div>
         </form>
     </section>
 </div>
 </body>
+<script src="./js/upload.js">
+</script>
 <script>
     findInput();
 </script>

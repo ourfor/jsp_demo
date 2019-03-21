@@ -1,0 +1,6 @@
+body{text-align:center}
+section{margin:10px auto}
+section>h3{color:red;font-size:2em}
+section>ul{text-align:left}
+section li{font-size:1.2em}
+li>a{text-decoration:none}

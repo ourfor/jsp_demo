@@ -54,11 +54,14 @@ public class signUp extends HttpServlet {
 
                 }
 
+                String layout = "css/layout/register.css";
+
 
                 out.println("<!DOCTYPE HTML><html><head><title>用户信息</title></head>");
+                out.println("<link type='text/css' rel='stylesheet' href='"+layout+"'>");
                 out.println("<body>");
-
-                out.println("<table>");
+                out.println("<form>");
+                out.println("<table style='text-align:left'>");
                 out.println("<tr><td>用户名:</td><td>"+request.getParameter("username")+"</td></tr>");
                 out.println("<tr><td>密码:</td><td>"+request.getParameter("password")+"</td></tr>");
                 out.println("<tr><td>性别:</td><td>"+sex+"</td></tr>");
@@ -67,7 +70,10 @@ public class signUp extends HttpServlet {
                 out.println("<tr><td>学历:</td><td>"+education+"</td></tr>");
                 out.println("<tr><td>邮件地址:</td><td>"+request.getParameter("email")+"</td></tr>");
                 out.println("<tr><td>简历:</td><td>"+request.getParameter("resume")+"</td></tr>");
+                out.println("<tr></tr>");
+                out.println("<tr><td colspan='2'><input type='submit' value='我决定好了'><input type='button' value='我再想想'><td></tr>");
                 out.println("</table>");
+                out.println("</form>");
 
                 out.println("</body></html>");
 
