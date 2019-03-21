@@ -39,14 +39,14 @@ public abstract class StudentServlet extends HttpServlet{
             throws IOException,ServletException{
         PrintWriter out = response.getWriter();
         out.println("<!DOCTYPE HTML><html><head><title>"
-                +Title+"</title></head><body><p>"+Title+"</p><table>"
+                +Title+"</title></head><body><p>"+Title+"</p>"
         );
     }
 
     protected void printFooter(HttpServletResponse response)
             throws IOException,ServletException{
         PrintWriter out = response.getWriter();
-        out.println("</table></body></html>");
+        out.println("</body></html>");
 
     }
 

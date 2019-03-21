@@ -13,13 +13,15 @@ public class ShowStudent extends StudentServlet {
                                 HttpServletRequest request,
                                 List<Student> students) throws IOException, ServletException {
         PrintWriter out = response.getWriter();
+        out.println("<table>");
         for(Student student:students){
             out.println("<tr><td>"+student.getName()+"</td>" +
                     "<td>"+student.getAge()+"</td><td>"
                     + student.getQq()+"</td>"
                     + "<td><a href='EditStudent?id="+student.getId()+"'>修改</a></td>"
-                    + "<td><a href='DeleteStudent?id="+student.getId()+"'>删除</a></td>"
+                    + "<td><a href='DeleteStudent?id="+student.getId()+"'>删除</a></td></tr>"
             );
         }
+        out.println("</table>");
     }
 }
