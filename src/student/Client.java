@@ -14,7 +14,9 @@ import javax.servlet.annotation.WebServlet;
                 "/ShowStudent",
                 "/EditStudent",
                 "/AddStudent",
-                "/UpdateStudent"
+                "/UpdateStudent",
+                "/InsertStudent",
+                "/DeleteStudent"
         }
 )
 
@@ -31,7 +33,7 @@ public class Client extends HttpServlet{
             StudentServlet a = new ShowStudent();
             StudentServlet b = new EditStudent();
             StudentServlet c = new AddStudent();
-            StudentServlet n = new NullObject();
+            StudentServlet d = new InsertStudent();
 
             List<Student> students = new ArrayList<Student>();
             Student stu1 = new Student("101", "王小明", 23, "8899123");
@@ -39,10 +41,12 @@ public class Client extends HttpServlet{
             students.add(stu1);
             students.add(stu2);
 
+            request.setAttribute("students",students);
+
             //确定组织关系
             a.setNext(b);
             b.setNext(c);
-            c.setNext(n);
+            c.setNext(d);
 
             //设置标题
             a.setTitle("显示学生信息");
@@ -52,15 +56,13 @@ public class Client extends HttpServlet{
             a.setMessage("ShowStudent");
             b.setMessage("EditStudent");
             c.setMessage("AddStudent");
+            d.setMessage("InsertStudent");
 
         String message = request.getRequestURI();
-//        if(message.endsWith("ShowStudent")) {
-//
-//            java.io.PrintWriter out = response.getWriter();
-//            out.println("" + message);
-//        }
+        request.setAttribute("message",message);
 
-        a.Judge(message,request,response,students);
+
+        a.Judge(request,response);
 
     }
 }

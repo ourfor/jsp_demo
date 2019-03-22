@@ -28,26 +28,31 @@ public abstract class StudentServlet extends HttpServlet{
 
     protected StudentServlet next;
 
-    protected void Judge(String message,
-                         HttpServletRequest request,
-                         HttpServletResponse response,
-                         List<Student> students)
+    protected void Judge(HttpServletRequest request,
+                         HttpServletResponse response)
             throws IOException,ServletException{
 
         response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         request.setCharacterEncoding("UTF-8");
 
-        if(message.endsWith(this.message)) doGet(request,response,students);
-        else next.Judge(message,request,response,students);
+        String message = (String)request.getAttribute("message");
+
+        if(message.endsWith(this.message)) doGet(request,response);
+        else {
+            if(next!=null)
+            next.Judge(request,response);
+        }
 
     }
 
 
     public void doGet(HttpServletRequest request,
-                         HttpServletResponse response,
-                         List<Student> students)
+                         HttpServletResponse response)
             throws IOException,ServletException{
+
+        List<Student> students =
+                (List<Student>)request.getAttribute("students");
 
         response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
@@ -60,6 +65,12 @@ public abstract class StudentServlet extends HttpServlet{
         );
         printContent(response,request,students);
         out.println("</body></html>");
+    }
+
+    public void doPost(HttpServletRequest request,
+                      HttpServletResponse response)
+            throws IOException,ServletException{
+        doGet(request,response);
     }
 
 

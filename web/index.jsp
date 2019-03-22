@@ -16,6 +16,7 @@
     <h3>一些演示页面</h3>
     <li><a href="upload.jsp">文件上传</a></li>
     <li><a href="register.jsp">用户注册</a></li>
+    <li><a href="ShowStudent">学生管理</a></li>
   </section>
   </body>
 </html>

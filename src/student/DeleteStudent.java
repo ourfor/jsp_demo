@@ -6,10 +6,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class NullObject extends StudentServlet {
+public class DeleteStudent extends StudentServlet {
     @Override
     protected void printContent(HttpServletResponse response, HttpServletRequest request, List<Student> students) throws IOException, ServletException {
 
     }
-
 }
