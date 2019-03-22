@@ -33,42 +33,39 @@ public abstract class StudentServlet extends HttpServlet{
                          HttpServletResponse response,
                          List<Student> students)
             throws IOException,ServletException{
-        if(this.message.equals(message)) doGet(request,response,students);
+
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
+        if(message.endsWith(this.message)) doGet(request,response,students);
         else next.Judge(message,request,response,students);
 
     }
 
 
-    protected void doGet(HttpServletRequest request,
+    public void doGet(HttpServletRequest request,
                          HttpServletResponse response,
                          List<Student> students)
             throws IOException,ServletException{
-        printHeader(response);
-        printContent(response,request,students);
-        printFooter(response);
-    }
 
-    protected void printHeader(HttpServletResponse response)
-            throws IOException,ServletException{
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
         PrintWriter out = response.getWriter();
+
         out.println("<!DOCTYPE HTML><html><head><title>"
                 +Title+"</title></head><body><p>"+Title+"</p>"
         );
-    }
-
-    protected void printFooter(HttpServletResponse response)
-            throws IOException,ServletException{
-        PrintWriter out = response.getWriter();
+        printContent(response,request,students);
         out.println("</body></html>");
-
     }
+
 
     protected abstract void printContent(HttpServletResponse response,
                                          HttpServletRequest request,
                                          List<Student> students)
-            throws IOException,ServletException;
-
-    protected abstract void DealReq(HttpServletRequest request)
             throws IOException,ServletException;
 
 }

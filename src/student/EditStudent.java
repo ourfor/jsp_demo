@@ -9,10 +9,6 @@ import java.io.PrintWriter;
 
 public class EditStudent extends StudentServlet {
     public String message = "EditStudent";
-    @Override
-    protected void DealReq(HttpServletRequest request) throws IOException, ServletException {
-
-    }
 
     @Override
     protected void printContent(HttpServletResponse response,
