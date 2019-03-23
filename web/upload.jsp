@@ -18,6 +18,13 @@
     <!--
     <base href="https://demo.ourfor.top">
     -->
+    <!-- 1. Add latest jQuery and fancybox files -->
+
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
     <!-- javaScript -->
     <script src="js/check.js"></script>
     <link type="text/css" rel="stylesheet" href="css/layout/upload.css">
@@ -28,7 +35,7 @@
         <div id="upload"></div>
         <form enctype="multipart/form-data" method="post" action="./upload.do">
                     <div>
-                        <input type="file" name="filename">
+                        <input type="file" name="filename" oninput="ShowMenu();ShowFileInfo();">
                     </div>
                     <section class="FileInfo">未选择任何文件</section>
                     <div>
@@ -48,7 +55,24 @@
                         }
                     %>
                     <div>
-                        <a href='${filename}'>${recentUpload}</a>
+                        ${message}<br><br>
+                        <%!
+                            String RecentDisplay;
+                        %>
+                        <%
+                            if(fileName==null) {
+                                fileName="https://book.ourfor.top/favicon.ico";
+                            }
+                            if(fileName.endsWith("png")||fileName.endsWith("jpg")||fileName.endsWith("ico"))
+                                RecentDisplay="<div style='width:200px'><a data-fancybox=\"images\" href=\"" +fileName+
+                                        "\"><img width=100% src=\"" +fileName+
+                                        "\"></a></div>";
+                            else RecentDisplay="<a href='"+fileName+"'>"+request.getAttribute("recentUpload")+"</a>";
+
+                        %>
+
+                        <%= RecentDisplay %>
+
                     </div>
         </form>
     </section>

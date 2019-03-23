@@ -55,7 +55,7 @@ public class ConnectDBServlet extends HttpServlet {
 
                 out.println("<!DOCTYPE HTML><html><head><title>24节气</title><link rel='shrotcut icon' href" +
                         "='https://book.ourfor.top/favicon.ico'> " +
-                        "<style>table,td,tr,th{border:1px solid blueviolet}table{border-spacing:0}th{font-size:1.5em;color:red}</style>" +
+                        "<style>body{text-align:center}table{margin: auto}table,td,tr,th{border:1px solid blueviolet}table{border-spacing:0}th{font-size:1.5em;color:red}</style>" +
                         "</head><body>");
                 ConnectDB();
                 try{

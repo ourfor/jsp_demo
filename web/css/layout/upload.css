@@ -4,3 +4,7 @@ div.container{margin:100px auto;width:1200px}
 #upload{margin:0 auto;background-repeat:no-repeat}
 #upload:hover{cursor:pointer}
 input[name=filename]{visibility:hidden}
+#confirm{visibility:hidden}
+#reset{visibility:hidden}
+.FileInfo+div+div{text-align:center}
+.FileInfo+div+div>div{margin:auto}

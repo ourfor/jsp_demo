@@ -12,7 +12,6 @@ let ShowMenu = ()=>{
     let confirm = document.getElementById("confirm");
     let reset = document.getElementById("reset");
     fileInput = fileInput[0];
-
     if(fileInput.value==="") {
         confirm.style.visibility="hidden";
         reset.style.visibility="hidden";
@@ -29,10 +28,16 @@ function ShowFileInfo(){
     filename = filename[0];
     let FileInfo = document.getElementsByClassName("FileInfo");
     FileInfo = FileInfo[0];
-
-    FileInfo.innerText=filename.values.toString();
+    if(filename.value==='') FileInfo.innerText="未选择任何文件";
+    else FileInfo.innerText=filename.value;
 }
+
+let ChangeAction = ()=>{
+    alert("执行事件中");
+    ShowMenu();
+    ShowFileInfo();
+};
 
 let filename = document.getElementsByName("filename");
 filename = filename[0];
-filename.onpropertychange=ShowFileInfo();
+filename.onrowenter=ChangeAction;
