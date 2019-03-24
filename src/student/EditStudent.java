@@ -24,7 +24,7 @@ public class EditStudent extends StudentServlet {
         index=(students.get(index).getId().equals(id))?index:index+1;
         Student student = students.get(index);
         if(student!=null) {
-            out.println("<form method='get' action='UpdateStudent'>");
+            out.println("<form method='get' action='ModifyStudent'>");
             out.println("<input type='hidden' name='id' value='" + id + "'");
             out.println("<table>");
             out.println("<tr><td>姓名</td><td><input type='text' name='name' value='"

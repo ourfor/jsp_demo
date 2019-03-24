@@ -16,11 +16,13 @@ import javax.servlet.annotation.WebServlet;
                 "/AddStudent",
                 "/UpdateStudent",
                 "/InsertStudent",
-                "/DeleteStudent"
+                "/DeleteStudent",
+                "/ModifyStudent"
         }
 )
 
 public class Client extends HttpServlet{
+    private int count = 0;
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
             throws IOException,ServletException{
@@ -34,29 +36,40 @@ public class Client extends HttpServlet{
             StudentServlet b = new EditStudent();
             StudentServlet c = new AddStudent();
             StudentServlet d = new InsertStudent();
+            StudentServlet f = new DeleteStudent();
+            StudentServlet g = new ModifyStudent();
 
-            List<Student> students = new ArrayList<Student>();
-            Student stu1 = new Student("101", "王小明", 23, "8899123");
-            Student stu2 = new Student("102", "张大海", 20, "11223355");
-            students.add(stu1);
-            students.add(stu2);
+            //request.getAttribute("students")==null
+            if((request.getAttribute("students")==null)&&(count==0)) {
+                    List<Student> students = new ArrayList<Student>();
+                    Student stu1 = new Student("101", "王小明", 23, "8899123");
+                    Student stu2 = new Student("102", "张大海", 20, "11223355");
+                    students.add(stu1);
+                    students.add(stu2);
 
-            request.setAttribute("students",students);
+                    request.setAttribute("students", students);
+            }
+
 
             //确定组织关系
             a.setNext(b);
             b.setNext(c);
             c.setNext(d);
+            d.setNext(f);
+            f.setNext(g);
 
             //设置标题
             a.setTitle("显示学生信息");
             b.setTitle("添加学生信息");
             c.setTitle("修改编辑学生信息");
 
+
             a.setMessage("ShowStudent");
             b.setMessage("EditStudent");
             c.setMessage("AddStudent");
             d.setMessage("InsertStudent");
+            f.setMessage("DeleteStudent");
+            g.setMessage("ModifyStudent");
 
         String message = request.getRequestURI();
         request.setAttribute("message",message);

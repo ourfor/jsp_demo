@@ -18,6 +18,10 @@ public class InsertStudent extends StudentServlet{
 //        students.add(new Student(id,name,age,qq));
         students.add(new Student("110","李白",23,"2320813747"));
         request.setAttribute("students",students);
+//        java.io.PrintWriter out = response.getWriter();
+//        for(Student student:students){
+//            out.println(""+student.getName()+"<br>");
+//        }
         RequestDispatcher rd = request.getRequestDispatcher("/ShowStudent");
         rd.forward(request,response);
 
