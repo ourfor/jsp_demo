@@ -10,10 +10,19 @@ import java.util.List;
 public class ShowStudent extends StudentServlet {
 
     @Override
-    protected void printContent(HttpServletResponse response,
-                                HttpServletRequest request,
-                                List<Student> students) throws IOException, ServletException {
+    public void doGet(HttpServletRequest request,
+                      HttpServletResponse response)
+            throws IOException, ServletException {
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
         PrintWriter out = response.getWriter();
+        List<Student> students = (List<Student>) request.getAttribute("students");
+
+        out.println("<!DOCTYPE HTML><html><head><title>"
+                +Title+"</title></head><body><p>"+Title+"</p>"
+        );
         out.println("<table>");
         for(Student student:students){
             out.println("<tr><td>"+student.getName()+"</td>" +
@@ -24,5 +33,6 @@ public class ShowStudent extends StudentServlet {
             );
         }
         out.println("</table>");
+        out.println("</body></html>");
     }
 }

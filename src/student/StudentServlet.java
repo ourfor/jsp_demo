@@ -38,7 +38,7 @@ public abstract class StudentServlet extends HttpServlet{
 
         String message = (String)request.getAttribute("message");
 
-        if(message.endsWith(this.message)) doGet(request,response);
+        if(message.endsWith(this.message)) doPost(request,response);
         else {
             if(next!=null)
             next.Judge(request,response);
@@ -47,36 +47,25 @@ public abstract class StudentServlet extends HttpServlet{
     }
 
 
-    public void doGet(HttpServletRequest request,
+    public abstract void doGet(HttpServletRequest request,
                          HttpServletResponse response)
-            throws IOException,ServletException{
+            throws IOException,ServletException;
 
-        List<Student> students =
-                (List<Student>)request.getAttribute("students");
-
-        response.setContentType("text/html;charset=UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        request.setCharacterEncoding("UTF-8");
-
-        PrintWriter out = response.getWriter();
-
-        out.println("<!DOCTYPE HTML><html><head><title>"
-                +Title+"</title></head><body><p>"+Title+"</p>"
-        );
-        printContent(response,request,students);
-        out.println("</body></html>");
-    }
+//        response.setContentType("text/html;charset=UTF-8");
+//        response.setCharacterEncoding("UTF-8");
+//        request.setCharacterEncoding("UTF-8");
+//
+//        PrintWriter out = response.getWriter();
+//
+//        out.println("<!DOCTYPE HTML><html><head><title>"
+//                +Title+"</title></head><body><p>"+Title+"</p>"
+//        );
+//        out.println("</body></html>");
 
     public void doPost(HttpServletRequest request,
                       HttpServletResponse response)
             throws IOException,ServletException{
         doGet(request,response);
     }
-
-
-    protected abstract void printContent(HttpServletResponse response,
-                                         HttpServletRequest request,
-                                         List<Student> students)
-            throws IOException,ServletException;
 
 }

@@ -8,7 +8,11 @@ import java.util.List;
 
 public class ModifyStudent extends StudentServlet {
     @Override
-    protected void printContent(HttpServletResponse response, HttpServletRequest request, List<Student> students) throws IOException, ServletException {
+    public void doGet(HttpServletRequest request,
+                      HttpServletResponse response)
+            throws IOException, ServletException {
+
+        List<Student> students = (List<Student>)request.getAttribute("students");
         String name = request.getParameter("name");
         String id = request.getParameter("id");
         int age = Integer.parseInt(request.getParameter("age"));

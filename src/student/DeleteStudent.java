@@ -9,7 +9,15 @@ import javax.servlet.RequestDispatcher;
 
 public class DeleteStudent extends StudentServlet {
     @Override
-    protected void printContent(HttpServletResponse response, HttpServletRequest request, List<Student> students) throws IOException, ServletException {
+    public void doGet(HttpServletRequest request,
+                      HttpServletResponse response)
+            throws IOException, ServletException {
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
+
+        List<Student> students = (List<Student>)request.getAttribute("students");
 //        java.io.PrintWriter out = response.getWriter();
 //        out.println("成功接收信息");
         String id = request.getParameter("id");

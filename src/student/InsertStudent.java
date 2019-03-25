@@ -9,13 +9,18 @@ import javax.servlet.RequestDispatcher;
 
 public class InsertStudent extends StudentServlet{
     @Override
-    protected void printContent(HttpServletResponse response, HttpServletRequest request, List<Student> students) throws IOException, ServletException {
+    public void doGet(HttpServletRequest request,
+                      HttpServletResponse response)
+            throws IOException, ServletException {
 //        String name=request.getParameter("name");
 //        String id=request.getParameter("id");
 //        int age=Integer.parseInt(request.getParameter("age"));
 //        String qq=request.getParameter("qq");
 //
 //        students.add(new Student(id,name,age,qq));
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        List<Student> students = (List<Student>) request.getAttribute("students");
         students.add(new Student("110","李白",23,"2320813747"));
         request.setAttribute("students",students);
 //        java.io.PrintWriter out = response.getWriter();
