@@ -21,7 +21,6 @@ public class InsertStudent extends StudentServlet{
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         List<Student> students = (List<Student>) request.getAttribute("students");
-        students.add(new Student("110","李白",23,"2320813747"));
         request.setAttribute("students",students);
 //        java.io.PrintWriter out = response.getWriter();
 //        for(Student student:students){

@@ -26,13 +26,13 @@ public class EditStudent extends StudentServlet {
                 +Title+"</title></head><body><p>"+Title+"</p>"
         );
 
-        String id = request.getParameter("id");
+        int id = Integer.parseInt(request.getParameter("id"));
         int index = 0;
         for(Student student:students){
-            if(student.getId().equals(id)) break;
+            if(student.getId()==id) break;
             index++;
         }
-        index=(students.get(index).getId().equals(id))?index:index+1;
+        index=(students.get(index).getId()==id)?index:index+1;
         Student student = students.get(index);
         if(student!=null) {
             out.println("<form method='post' action='ModifyStudent'>");
@@ -56,4 +56,5 @@ public class EditStudent extends StudentServlet {
 
 
     }
+
 }

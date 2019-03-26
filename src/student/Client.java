@@ -41,12 +41,7 @@ public class Client extends HttpServlet{
 
             //request.getAttribute("students")==null
             if((request.getAttribute("students")==null)&&(count==0)) {
-                    List<Student> students = new ArrayList<Student>();
-                    Student stu1 = new Student("101", "王小明", 23, "8899123");
-                    Student stu2 = new Student("102", "张大海", 20, "11223355");
-                    students.add(stu1);
-                    students.add(stu2);
-
+                    List<Student> students = user.ConnectDBSingleton.getIns().getStudents();
                     request.setAttribute("students", students);
             }
 
@@ -60,7 +55,7 @@ public class Client extends HttpServlet{
 
             //设置标题
             a.setTitle("显示学生信息");
-            b.setTitle("添加学生信息");
+            b.setTitle("修改学生信息");
             c.setTitle("修改编辑学生信息");
 
 
@@ -76,6 +71,12 @@ public class Client extends HttpServlet{
 
 
         a.Judge(request,response);
+
+    }
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response)
+            throws IOException,ServletException{
+        doGet(request,response);
 
     }
 }

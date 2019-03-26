@@ -1,26 +1,26 @@
 package student;
 
 public class Student {
-    private String id;
+    private int id;
     private String name;
     private int age;
-    private String qq;
+    private int qq;
 
     public Student() {
     }
 
-    public Student(String id, String name, int age, String qq) {
+    public Student(int id, String name, int age, int qq) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.qq = qq;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -40,11 +40,11 @@ public class Student {
         this.age = age;
     }
 
-    public String getQq() {
+    public int getQq() {
         return qq;
     }
 
-    public void setQq(String qq) {
+    public void setQq(int qq) {
         this.qq = qq;
     }
 }

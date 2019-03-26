@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import user.ConnectDBSingleton;
 
 public class ShowStudent extends StudentServlet {
 
@@ -18,7 +19,7 @@ public class ShowStudent extends StudentServlet {
         request.setCharacterEncoding("UTF-8");
 
         PrintWriter out = response.getWriter();
-        List<Student> students = (List<Student>) request.getAttribute("students");
+        List<Student> students = ConnectDBSingleton.getIns().getStudents();
 
         out.println("<!DOCTYPE HTML><html><head><title>"
                 +Title+"</title></head><body><p>"+Title+"</p>"
@@ -34,5 +35,6 @@ public class ShowStudent extends StudentServlet {
         }
         out.println("</table>");
         out.println("</body></html>");
+        request.setAttribute("students",students);
     }
 }
