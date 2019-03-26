@@ -25,6 +25,7 @@ public class ShowStudent extends StudentServlet {
                 +Title+"</title></head><body><p>"+Title+"</p>"
         );
         out.println("<table>");
+        out.println("<tr><th>姓名</th><th>年龄</th><th>QQ</th></tr>");
         for(Student student:students){
             out.println("<tr><td>"+student.getName()+"</td>" +
                     "<td>"+student.getAge()+"</td><td>"
