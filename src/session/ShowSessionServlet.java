@@ -33,11 +33,13 @@ public class ShowSessionServlet extends HttpServlet {
 
         if(accessCount==null){
             heading = "还未登录,请先登录";
-            RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("/Login.jsp");
             rd.forward(request,response);
         }
         else {
             heading= "欢迎再次登录";
+            accessCount +=1;
+
         }
 
         PrintWriter out = response.getWriter();
@@ -48,8 +50,18 @@ public class ShowSessionServlet extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
 
+        request.setAttribute("accessCount",accessCount);
 
 
+
+
+    }
+
+    protected void doPost(HttpServletRequest request,
+                     HttpServletResponse response)
+        throws IOException,ServletException{
+
+        doGet(request,response);
 
     }
 }

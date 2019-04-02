@@ -35,6 +35,7 @@
       <li><a href="ShowStudent">学生管理</a></li>
       <li><a href="dbConnect">连接数据库</a></li>
       <li><a href="LoginDownload">登陆下载</a></li>
+      <li><a href="Session">Session会话</a></li>
     </ul>
     <div name="list">
       <img src="images/blogfavicon.png" href="https://blog.ourfor.top">
