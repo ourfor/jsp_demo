@@ -33,7 +33,7 @@ public class ShowSessionServlet extends HttpServlet {
 
         if(accessCount==null){
             heading = "还未登录,请先登录";
-            RequestDispatcher rd = request.getRequestDispatcher("/Login.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
             rd.forward(request,response);
         }
         else {

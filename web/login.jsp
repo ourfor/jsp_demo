@@ -16,26 +16,15 @@
 <head>
     <title>登录</title>
     <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/layout/login.css">
 </head>
 <body>
 <section>
     <form method="post" action="Login">
-        <table>
-            <tr>
-                <td>用户名</td>
-                <td><input type="text" name="username"></td>
-            </tr>
-            <tr>
-                <td>密码</td>
-                <td><input type="password" name="password"></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="登录">
-                    <input type="reset" value="重置">
-                </td>
-            </tr>
-        </table>
+        <h3>Login</h3>
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="Login">
     </form>
 </section>
 </body>

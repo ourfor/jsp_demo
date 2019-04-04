@@ -1,0 +1,11 @@
+<%@ page pageEncoding="UTF-8"
+         language="java"
+         contentType="text/html;charset=UTF-8"
+%>
+
+    <title>Zip的小窝</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+
+    <header>
+    <span><a>博客</a></span>
+    </header>
