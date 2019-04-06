@@ -1,4 +1,6 @@
 package account;
+import user.ConnectDBSingleton;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
+import java.sql.ResultSet;
+import java.util.List;
 
 
 @WebServlet(
@@ -17,7 +21,7 @@ import javax.servlet.http.HttpSession;
                 "/SignIn"
         }
 )
-public class Login extends HttpServlet {
+public class login extends HttpServlet {
         private static final long serialVersionUID = 1L;
         protected void doGet(HttpServletRequest request,
                              HttpServletResponse response)
@@ -32,7 +36,23 @@ public class Login extends HttpServlet {
 
                 Integer accessCount = (Integer) request.getAttribute("accessCount");
 
-                if(username.equals("Sagit")&&password.equals("23208")) {
+                ConnectDBSingleton db = ConnectDBSingleton.getIns();
+
+                String dbPassword="";
+                        String Statement = "select username,password from user where username='" +
+                                username +
+                                "';";
+                        System.out.println(Statement);
+                        db.setDatabase("Demo");
+                        List<String> result = db.getResult(Statement,2);
+                        try {
+                                dbPassword = result.get(0);
+                        }
+                        catch(Exception e){
+                                System.out.println(e);
+                        }
+
+                if(result!=null&&password.equals(dbPassword)) {
                         accessCount=1;
                         HttpSession session = request.getSession(true);
                         session.setAttribute("accessCount",accessCount);

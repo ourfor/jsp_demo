@@ -14,9 +14,14 @@ public class ConnectDBSingleton {
     private static ConnectDBSingleton Ins;
     private ConnectDBSingleton(){}
     private Connection conn;
-    private String uri = "jdbc:mysql://db.ourfor.top:3306/Student?useSSL=true&characterEncoding=UTF-8";
+    private String uri = "jdbc:mysql://db.ourfor.top:3306/DBN?useSSL=true&characterEncoding=UTF-8";
     private String user = "root";
     private String password = "2320813747DBmm$$";
+    private String database = "Student";
+
+    public void setDatabase(String database) {
+        this.database = database;
+    }
 
     public static ConnectDBSingleton getIns(){
         if(Ins==null) Ins = new ConnectDBSingleton();
@@ -24,6 +29,7 @@ public class ConnectDBSingleton {
     }
 
     public ResultSet Connect(){
+        uri = uri.replace("DBN",database);
         try{
 
             conn = DriverManager.getConnection(uri,user,password);
@@ -46,6 +52,25 @@ public class ConnectDBSingleton {
         }
         catch(Exception e){
            System.out.println("数据库连接失败");
+        }
+        return null;
+    }
+
+    public ResultSet Connect(String command){
+        uri=uri.replaceFirst("DBN",database);
+//        System.out.println(database);
+//        System.out.println(uri);
+        try{
+            conn = DriverManager.getConnection(uri,user,password);
+
+            Statement sql = conn.createStatement();
+
+            ResultSet rs = sql.executeQuery(command);
+            return rs;
+
+        }
+        catch(Exception e){
+            System.out.println("数据库连接失败");
         }
         return null;
     }
@@ -83,5 +108,20 @@ public class ConnectDBSingleton {
         }
 
         return getStudents();
+    }
+
+    public List<String> getResult(String command,int index){
+       List<String> result = new ArrayList<>();
+       ResultSet rs = Connect(command);
+       try {
+           while (rs.next()) {
+               result.add(rs.getString(index));
+           }
+       }
+       catch(Exception e){
+          System.out.println(e);
+       }
+
+       return result;
     }
 }
