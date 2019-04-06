@@ -2,7 +2,7 @@ body,html{
     padding:0;
     margin:0;
     text-align:center;
-    background:#8e24aa;
+    background:#34495e;
     font-family:sans-serif;
 }
 *{
@@ -23,6 +23,8 @@ section>form{
     width:100%;
     height:100%;
     text-align:center;
+    background: #191919;
+    padding-top: 20px;
 }
 form>h3{
     color:#ede7f6;
@@ -35,7 +37,7 @@ input[type=text],input[type=password],input[type=submit]{
     margin: 30px auto;
     display:block;
     border: 0;
-    background:none; !important
+    background:none;
     text-align: center;
     font-size: 0.8em;
     border-radius: 20px;
@@ -43,6 +45,7 @@ input[type=text],input[type=password],input[type=submit]{
     padding: 20px 30px;
     outline: none;
     transition: 0.25s;
+    color: white;
 }
 
 input[type=password]:focus,input[type=text]:focus{
@@ -63,4 +66,8 @@ input[type=submit]:hover{
     cursor: pointer;
 }
 
+input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0 1000px #191919 inset;
+    -webkit-text-fill-color: white;
+}
 

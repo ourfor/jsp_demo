@@ -29,15 +29,16 @@
   <body>
   <section>
     <h3>一些演示页面</h3>
-    <ul>
-      <li><a href="upload.jsp">文件上传</a></li>
-      <li><a href="register.jsp">用户注册</a></li>
-      <li><a href="login.jsp">登录</a></li>
-      <li><a href="ShowStudent">学生管理</a></li>
-      <li><a href="dbConnect">连接数据库</a></li>
-      <li><a href="LoginDownload">登陆下载</a></li>
-      <li><a href="Session">Session会话</a></li>
-      <li><a href="combine.jsp">组合页面</a></li>
+      <div name="items">
+      <a href="upload.jsp">文件上传</a>
+      <a href="register.jsp">用户注册</a>
+      <a href="login.jsp">登录</a>
+      <a href="ShowStudent">学生管理</a>
+      <a href="dbConnect">连接数据库</a>
+      <a href="LoginDownload">登陆下载</a>
+      <a href="Session">Session会话</a>
+      <a href="combine.jsp">组合页面</a>
+      </div>
     </ul>
     <div name="list">
       <img src="images/blogfavicon.png" href="https://blog.ourfor.top">
