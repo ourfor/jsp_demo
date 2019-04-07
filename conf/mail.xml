@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mail>
+<mailUser>
+    <user>ourfor@126.com</user>
+    <password>19981205zxw</password>
+</mailUser>
+<mailServer>
+    <server>smtp.126.com</server>
+    <port>465</port>
+</mailServer>
+</mail>
