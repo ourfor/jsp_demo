@@ -34,7 +34,7 @@
 
     </dependencies>
     <build>
-        <defaultGoal>compile</defaultGoal>
+        <defaultGoal>clean compile package deploy</defaultGoal>
         <sourceDirectory>src</sourceDirectory>
         <outputDirectory>out/target/</outputDirectory>
         <!--<resources>-->
