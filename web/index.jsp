@@ -39,12 +39,12 @@
       <a href="Session">Session会话</a>
       <a href="combine.jsp">组合页面</a>
       </div>
-    </ul>
+
     <div name="list">
-      <img src="images/favicon.ico" href="https://blog.ourfor.top">
-      <img src="images/weibo.png" href="https://weibo.com/ourfor">
-      <img src="images/insA.jpg" href="https://www.instagram.com/Sagit24k/">
-      <img src="images/github.png" href="https://github.com/ourfor">
+      <img src="images/blog.jpg" alt="zip的小窝" href="https://blog.ourfor.top">
+      <img src="images/share.jpg" alt="我的微博" href="https://weibo.com/ourfor">
+      <img src="images/insA.jpg" alt="My instagram" href="https://www.instagram.com/Sagit24k/">
+      <img src="images/favicon.ico" alt="Github" href="https://github.com/ourfor">
     </div>
     <%= Time.getIns().getTime() %>
   </section>
