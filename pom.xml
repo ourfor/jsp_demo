@@ -57,6 +57,15 @@
                 <!--</includes>-->
             <!--</resource>-->
         <!--</resources>-->
+        <resources>
+            <resource>
+                <directory>conf</directory>
+                <includes>
+                    <include>*.*</include>
+                    <include>*/</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
