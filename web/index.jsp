@@ -41,9 +41,9 @@
       </div>
     </ul>
     <div name="list">
-      <img src="images/blogfavicon.png" href="https://blog.ourfor.top">
+      <img src="images/favicon.ico" href="https://blog.ourfor.top">
       <img src="images/weibo.png" href="https://weibo.com/ourfor">
-      <img src="images/ic_forward_share_tim.png" href="https://www.instagram.com/Sagit24k/">
+      <img src="images/insA.jpg" href="https://www.instagram.com/Sagit24k/">
       <img src="images/github.png" href="https://github.com/ourfor">
     </div>
     <%= Time.getIns().getTime() %>

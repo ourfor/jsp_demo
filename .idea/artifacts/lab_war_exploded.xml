@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="lab:war exploded">
-    <output-path>$PROJECT_DIR$/target/jsp_demo-1.0-SNAPSHOT</output-path>
+    <output-path>$USER_HOME$/Desktop/www/lab_war_exploded/</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>

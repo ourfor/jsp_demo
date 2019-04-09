@@ -21,7 +21,7 @@ public class MailConfig {
     private String user = "";
     private String password = "";
     private String main_content = "你好，这是一封通过JavaMail发送的邮件😯";
-    private String subject = "Hello JavaMail";
+    private String subject = "Zip小窝专用通知邮件";
 
     public boolean send(){
         Properties pro = new Properties();
