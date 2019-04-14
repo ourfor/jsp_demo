@@ -59,10 +59,9 @@
         <!--</resources>-->
         <resources>
             <resource>
-                <directory>conf</directory>
+                <directory>.</directory>
                 <includes>
-                    <include>*.*</include>
-                    <include>*/</include>
+                    <include>conf</include>
                 </includes>
             </resource>
         </resources>
