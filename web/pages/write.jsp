@@ -24,23 +24,34 @@
     开始编辑
     <input type="submit" onclick="getHtml();">
     <input type="reset" onclick="getHtml();">
+    <input type="text" id="markdown-doc" name="markdown">
+    <input type="text" id="html-code" name="html">
+
 </h3>
-    <input type="text" id="md" name="md">
-    <input type="text" id="html" name="html">
-<div id="editormd">
-    <textarea style="display:none;">### Hello Editor.md !</textarea>
-</div>
+    <div class="editormd" id="editormd">
+        <textarea class="editormd-markdown-textarea" name="editormd-markdown-doc"></textarea>
+        <!-- html textarea 需要开启配置项 saveHTMLToTextarea == true -->
+        <textarea class="editormd-html-textarea" name="editormd-html-code"></textarea>
+    </div>
+    <!-- html textarea 需要开启配置项 saveHTMLToTextarea == true -->
 </form>
 </body>
     <script src="../libs/jquery.min.js"></script>
     <script src="../libs/editormd.min.js"></script>
     <script>
         $(function(){
-            var editor = editormd({
-                id: "editormd",
-                path: "../libs/lib/"
+            var editor = editormd("editormd",{
+                width  : "90%",
+                height : 640,
+                path   : "../libs/lib/",
+                saveHTMLToTextarea : true
             });
+
+            //editor.getMarkdown();       // 获取 Markdown 源码
+            editor.getHTML();           // 获取 Textarea 保存的 HTML 源码
+            //editor.getPreviewedHTML();  // 获取预览窗口里的 HTML，在开启 watch 且没有开启 saveHTMLToTextarea 时使用
         });
+
     </script>
     <script src="../js/write.js"></script>
 </html>

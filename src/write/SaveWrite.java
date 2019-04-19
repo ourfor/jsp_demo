@@ -25,11 +25,18 @@ public class SaveWrite extends HttpServlet {
                 response.setCharacterEncoding("UTF-8");
                 response.setContentType("text/html;charset=UTF-8");
 
-                String md = request.getParameter("md");
+                String md = request.getParameter("markdown");
                 String html = request.getParameter("html");
 
                 PrintWriter out = response.getWriter();
+                out.println("<!DOCTYPE HTML><html>" +
+                        "<head>" +
+                        "<script src='./libs/jquery.min.js'></script>" +
+                        "<link rel='stylesheet' type='text/css' href='./libs/css/editormd.preview.min.css'>" +
+                        "</head>" +
+                        "<body>");
                 out.println(html);
+                out.println("</body></html>");
 
         }
 

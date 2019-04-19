@@ -2,13 +2,13 @@ let getHtml = ()=>{
     let edit = document.getElementById("editormd");
     let text = edit.getElementsByTagName("textarea")[0];
 
-    let preview = document.getElementsByClassName("markdown-body editormd-preview-container")[0];
+    let preview = document.getElementsByClassName("editormd-html-textarea")[0];
 
-    // alert(""+ori);
-    // alert(""+html);
-    let md = document.getElementById("md");
-    let html = document.getElementById("html");
+    alert(""+text.innerText);
+    alert(""+preview.innerText)
+    let md = document.getElementById("markdown-doc");
+    let html = document.getElementById("html-code");
 
     md.value=text.innerText;
-    html.value=preview.innerHTML;
+    html.value=preview.innerText;
 };
