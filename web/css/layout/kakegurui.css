@@ -1,0 +1,23 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.container{
+    width: 1200px;
+    background: white;
+    margin: 0 auto;
+}
+section{
+    margin: 10px auto;
+    text-align: center;
+}
+section>a[data-fancybox]>img{
+    margin: 10px;
+}
+p[name=description]{
+    text-align: left;
+}
+.aplayer{
+    height: 300px;
+}
