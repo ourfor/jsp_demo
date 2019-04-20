@@ -4,6 +4,7 @@
 
 <% String path = request.getContextPath(); %>
 
-<script src="../js/Aplayer.min.js"></script>
-<script src="../js/Dplayer.min.js"></script>
+<script src="../libs/jquery.min.js"></script>
 <script src="../js/jquery.fancybox.min.js"></script>
+<script src="../js/APlayer.min.js"></script>
+<script src="../js/DPlayer.min.js"></script>
