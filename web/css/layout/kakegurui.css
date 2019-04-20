@@ -42,3 +42,11 @@ p[name=description]{
 .author{
     display: inline
 }
+
+nav{
+    visibility: hidden;
+    width: 10px;
+}
+nav>img{
+    height: 0
+}

@@ -70,10 +70,15 @@
 </div>
 <div class="gap"></div>
 
+<nav>
+    <img src="https://file.ourfor.top/source/kakegurui/main.jpg">
+    <img src="https://file.ourfor.top/source/kakegurui/kv_pc.jpg">
+    <img src="https://file.ourfor.top/source/kakegurui/logo.png">
+</nav>
+
 <div class="author">
     本文作者: ourfor, 转载请注明出处
 </div>
-
 </body>
 <script>
     const dp = new DPlayer({
