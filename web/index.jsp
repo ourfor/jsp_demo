@@ -39,6 +39,7 @@
       <a href="Session">Session会话</a>
       <a href="pages/write.jsp">编辑文章</a>
       <a href="combine.jsp">组合页面</a>
+      <a href="pages/kakegurui.jsp">狂赌之渊</a>
       </div>
 
     <div name="list">

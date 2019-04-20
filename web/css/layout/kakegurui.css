@@ -1,6 +1,4 @@
-body,html{
-    margin: 0;
-    padding: 0;
+body{
     text-align: center;
 }
 .container{
@@ -12,12 +10,35 @@ section{
     margin: 10px auto;
     text-align: center;
 }
-section>a[data-fancybox]>img{
+a[data-fancybox]>img{
     margin: 10px;
 }
 p[name=description]{
     text-align: left;
 }
-.aplayer{
-    height: 300px;
+
+.video{
+    width: 800px;
+}
+
+.button{
+    border: 1px solid #9C27B0;
+    color: white;
+    background-color: #9C27B0;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+.button:hover{
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.gap{
+    border: 0;
+    height: 10px;
+}
+
+.author{
+    display: inline
 }

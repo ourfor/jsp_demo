@@ -2,7 +2,10 @@
          pageEncoding="UTF-8"
          language="java" %>
 
-<% String path = request.getContextPath(); %>
+<%
+    response.addHeader("Access-Control-Allow-Origin","*");
+%>
+
 
 <script src="../libs/jquery.min.js"></script>
 <script src="../js/jquery.fancybox.min.js"></script>

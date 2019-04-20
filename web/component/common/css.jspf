@@ -4,8 +4,11 @@
 
 <% //导入一些公共的css 主要用于图片 视频 音乐等多媒体服务 %>
 
+<%
+    response.addHeader("Access-Control-Allow-Origin","*");
+%>
 
 <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.min.css" />
 <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="../css/DPlayer.min.css" />
+<link rel="stylesheet" class="dplayer-css" type="text/css" href="../css/DPlayer.min.css" />
 <link rel="stylesheet" type="text/css" href="../css/APlayer.min.css" />
