@@ -1,0 +1,11 @@
+<%@ page contentType="text/html;charset=UTF-8"
+         pageEncoding="UTF-8"
+         language="java" %>
+
+<% //导入一些公共的css 主要用于图片 视频 音乐等多媒体服务 %>
+
+
+<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/Dplayer.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/Aplayer.min.css" />

@@ -1,0 +1,9 @@
+<%@ page contentType="text/html;charset=UTF-8"
+         pageEncoding="UTF-8"
+         language="java" %>
+
+<% String path = request.getContextPath(); %>
+
+<script src="../js/Aplayer.min.js"></script>
+<script src="../js/Dplayer.min.js"></script>
+<script src="../js/jquery.fancybox.min.js"></script>
