@@ -5,6 +5,9 @@ body{
     width: 1200px;
     background: white;
     margin: 0 auto;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,.07),0 1px 5px 0 rgba(0,0,0,.1);
 }
 section{
     margin: 10px auto;
@@ -15,6 +18,9 @@ a[data-fancybox]>img{
 }
 p[name=description]{
     text-align: left;
+    border: 1px solid #e9e9e9;
+    padding: 5px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1)
 }
 
 .video{

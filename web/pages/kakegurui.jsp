@@ -47,7 +47,9 @@
     人会受到追捧，赌输了还不了债交不了缴纳金给学生会，就会被冠以家畜的称号，男的叫蠢狗，女的叫杂猫。作为家畜是要服从人的命令的。
 </p>
 
+    <h3>魔性的主题曲</h3>
     <div class="aplayer"
+         id="aplayer"
          data-id="544000472"
          data-server="netease"
          data-type="song"
@@ -55,6 +57,7 @@
          data-listmaxheight="500px"
     ></div>
 
+    <h3>一些预告片花</h3>
 <section class="video">
     <div id="dplayer"></div>
 </section>
