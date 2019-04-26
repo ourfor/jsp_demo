@@ -1,3 +1,5 @@
+@import url("../fonts/font.css");
+
 body{text-align:center;background:#263238;font-family:sans-serif,yahe}
 section{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
 section{width:600px;background-size:cover;height:auto;background:#757575;padding-bottom:20px;}
@@ -23,3 +25,8 @@ div[name=items]>a:hover{
 }
 li>a{text-decoration:none}
 div[name=list]>img{border-radius:50%;width:40px;cursor:pointer}
+
+
+* {
+    font-family: 'NotoSans',serif;
+}
