@@ -1,3 +1,5 @@
+@import url("../fonts/font.css");
+
 body{
     text-align: center;
 }
@@ -55,4 +57,9 @@ nav{
 }
 nav>img{
     height: 0
+}
+
+
+* {
+    font-family: NotoSans;
 }

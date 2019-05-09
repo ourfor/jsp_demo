@@ -1,0 +1,10 @@
+@font-face{
+    font-family: NotoSans;
+    src:
+        url("NotoSansSC-Regular.ttf") format("truetype"),
+        url("NotoSansSC-Regular.svg") format("svg"),
+        url("NotoSansSC-Regular.eot") format("embedded-opentype"),
+        url("NotoSansSC-Regular.woff") format("woff"),
+        url("NotoSansSC-Regular.woff2") format("woff2");
+
+}

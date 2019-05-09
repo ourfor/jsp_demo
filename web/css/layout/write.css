@@ -1,5 +1,12 @@
+@import url("../fonts/font.css");
+
 .editormd .CodeMirror, .editormd .CodeMirror-scroll, .editormd .editormd-preview{min-height:600px;height:100%;}
 h3>input{float:right;padding:auto;margin:auto;padding-bottom:0}
 from>h3{padding-bottom:0}
 #markdown-doc{visibility:hidden;display:none}
 #html-code{visibility:hidden;display:none}
+
+
+* {
+    font-family: NotoSans;
+}
