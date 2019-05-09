@@ -34,6 +34,7 @@
       <a href="register.jsp">用户注册</a>
       <a href="login.jsp">登录</a>
       <a href="ShowStudent">学生管理</a>
+      <a href="DataSource">商品信息</a>
       <a href="dbConnect">连接数据库</a>
       <a href="LoginDownload">登陆下载</a>
       <a href="Session">Session会话</a>
