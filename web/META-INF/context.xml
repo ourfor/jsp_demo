@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
+
 <Context reloadable="true">
     <Resource
-            name="jdbc/shopInfo"
-            type="javax.sql.DataSource"
-            maxActive="4"
-            maxIdle="2"
-            username="Sagit"
-            password="2320813747$$"
-            driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-            maxWait="5000"
-            url="jdbc:sqlserver://db.ourfor.top:1433;databaseName=Learn"
-    />
+        name="jdbc/shop"
+        type="javax.sql.DataSource"
+        encoding="UTF-8"
+        maxActive="4"
+        maxIdle="2"
+        username="sa"
+        password="2320813747DB$$"
+        maxWait="5000"
+        diverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+        url="jdbc:sqlserver://localhost:1433;databaseName=shop" />
 </Context>
