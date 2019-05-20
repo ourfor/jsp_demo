@@ -58,4 +58,11 @@
         </form-login-config>
     </login-config>
 
+    <resource-ref>
+        <description>DB Connect Config</description>
+        <res-ref-name>jdbc/shop</res-ref-name>
+        <res-auth>Container</res-auth>
+        <res-type>javax.sql.DataSource</res-type>
+    </resource-ref>
+
 </web-app>
